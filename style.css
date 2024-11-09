@@ -1,0 +1,133 @@
+:root {
+    --color-primary: #caf82a;
+    --color-background-medium: #1f1f1f;
+    --color-background-light: #333333;
+    --color-background-dark: #141414;
+    --color-text-light: #fff;
+    --font-size-body: 14px;
+    --font-size-heading: 24px;
+    --line-heigth-body: 1.5;
+    --border-radius: 12px;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    background-color: var(--color-background-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-body);
+    line-height: var(--line-heigth-body);
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+.profile {
+    display: grid;
+    place-items: center;
+    row-gap: 24px;
+    width: 327px;
+    padding: 24px;
+    background-color: var(--color-background-medium);
+    border-radius: var(--border-radius);
+}
+
+.profile__picture {
+    width: 88px;
+    height: 88px;
+}
+
+.profile__picture img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile__header {
+    display: grid;
+    justify-items: center;
+    row-gap: 4px;
+}
+.profile__name {
+    font-size: var(--font-size-heading);
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+.profile__location {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.profile__bio {
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+.profile__links {
+    display: grid;
+    row-gap: 16px;
+    width: 100%;
+}
+
+.profile__link {
+    background-color: var(--color-background-light);
+    color: var(--color-text-light);
+    padding: 12px;
+    border-radius: 8px;
+    display: grid;
+    justify-items: center;
+    font-weight: 700;
+}
+
+.profile__link:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background-dark);
+}
+
+.attribution {
+    grid-row: 2;
+    font-size: 11px; 
+    padding: 20px;
+    text-align: center; 
+    color: var(--color-text-light);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .profile {
+        width: 456px;
+        padding: 40px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1440px) {
+    .profile {
+        width: 384px;
+        padding: 40px;
+    }
+}
+
